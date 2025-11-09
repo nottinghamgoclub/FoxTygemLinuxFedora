@@ -54,11 +54,13 @@ Neither Fox nor Tygem will work from Steam if you run them from Steam directly. 
 
 Therefore, we are going to write a small shell script to set a few variables. These variables are self-contained in the script - after the script exits, the variables disappear, so there is no danger of affecting other games ran via Proton in this way.
 
-You need to replace the APPID in the below shell script with the APPID Steam has chosen for your game. To find this, first `cd` to the `compatdata` directory, like this: `cd ~/.steam/steam/steamapps/compatdata/` and then order the folders by date last modified, like this: `ls -t`. In general, it will be the name of the first directory in this list. But, to make sure, use your file browser to check the contents of the Program Files (x86) folder. You need to enable hidden files in your file browser. In general, it will be on a path like this: `/home/user/.steam/steam/steamapps/compatdata/123456789/pfx/drive_c/Program Files (x86)/foxwq/`, like this:
+You need to replace the APPID in the below shell script with the APPID Steam has chosen for your game. To find this, first `cd` to the `compatdata` directory, like this: `cd ~/.steam/steam/steamapps/compatdata/` and then order the folders by date last modified, like this: `ls -t`. In general, it will be the name of the first directory in this list. 
+
+But, to make sure, use your file browser to check the contents of the Program Files (x86) folder to see if you can find the foxwq folder. You need to enable hidden files in your file browser. In general, it will be on a path like this: `/home/user/.steam/steam/steamapps/compatdata/123456789/pfx/drive_c/Program Files (x86)/foxwq/`, like this:
 
 ![Game directory in Program Files (x86)](ProgramFiles.png)
 
-Once you are sure of your appid, paste this into a text editor, replacing the APPID:
+Once you are sure that you are in the right place, you can traverse back up a few directory levels to check your APPID or click in the address bar of your file browser. Once you know it, paste this into a text editor, replacing the APPID:
 
 ```
 #!/bin/bash
