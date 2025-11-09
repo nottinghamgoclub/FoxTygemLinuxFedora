@@ -167,6 +167,8 @@ cd "$APPDIR" || exit 1
 
 ```
 
+Save this in the `~/bin` folder and name it `run_tygem.sh` like we did for Fox.
+
 Tygem's installation directory actually has a perfectly fine `.ico` file to use, but it needs converting to `.png` first. Copy-paste the icon to somewhere convenient and then run the equivalent command just as we used for Fox:
 
 ```
